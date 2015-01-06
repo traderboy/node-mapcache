@@ -2,6 +2,12 @@
 
 [![Build Status](https://secure.travis-ci.org/geo-data/node-mapcache.png)](http://travis-ci.org/geo-data/node-mapcache)
 
+Forked and updated to compile with VS 2012 in Windows 8 64-bit.  Modified the bindings.gyp and added common.gypi for additional compile options.  Requires https://github.com/traderboy/mapcache to be built as a static library.  
+
+Download Mapserver 64 bit headers and libraries from http://archive.gisinternals.com/sdk/. I used http://archive.gisinternals.com/sdk/Download.aspx?file=release-1600-x64-gdal-1-11-1-mapserver-6-4-1-libs.zip.
+
+Git clone this fork.  Edit binding.gyp to reflect paths to Mapserver libraries and mapcache install path.  Open a VS Command Prompt, go to the git folder, type "npm install ." to compile.  Note:  must have the binaries from http://archive.gisinternals.com/sdk/Download.aspx?file=release-1600-x64-gdal-1-11-1-mapserver-6-4-1.zip downloaded, unzipped and in your path for this to actually work in Node.
+
 This module provides a map tile caching solution for Node.js by creating
 bindings to [Mapserver Mapcache](http://www.mapserver.org/trunk/mapcache).
 
